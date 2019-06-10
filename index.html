@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EKLLL</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link media="(min-width:960px)" rel="stylesheet" href="pcstyle.css">
+    <link media="(max-width:960px)" rel="stylesheet" href="mobile.css">
+</head>
+
+<body>
+
+    <div id="top-nav">
+        <a href="home.html">EKLLL&nbsp;.</a>
+
+    </div>
+
+    <div id="eklll" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="waving">
+            <div class="title">
+                <p>你好！</p>
+                <img src="img/hi.gif" alt="">
+            </div>
+            <p class="name">我叫罗毅坤。</p>
+        </div>
+        <div class="contact">
+            <p class="tel">联系电话</p>
+            <p class="email">电子邮箱</p>
+        </div>
+    </div>
+
+
+
+    <div id="content1">
+
+        <div class="text">
+
+            <h3>关于我</h3>
+
+            <p>我13年起从事图形界面的设计工作我13年起从事图形界面的设计工作13年起从事图形界面的
+                设计工作我13年起从事图形界面的设计工作</p>
+        </div>
+
+        <div class="works">
+
+            <a href="#">
+                <img src="img/sunday.png" alt="">
+            </a>
+        </div>
+
+        <p id="tag">个人简历</p>
+
+    </div>
+
+
+    <div id="content2">
+
+        <div class="text">
+
+            <h3>电商购物</h3>
+
+            <p>我13年起从事图形界面的设计工作我13年起从事图形界面的设计工作13年起从事图形界面的
+                设计工作我13年起从事图形界面的设计工作</p>
+        </div>
+
+        <div class="works">
+
+            <a href="#">
+                <img src="img/sunday.png" alt="">
+            </a>
+        </div>
+
+        <p id="tag">个人简历</p>
+
+    </div>
+
+
+    <div id="content3">
+
+        <div class="text">
+
+            <h3>匿名论坛</h3>
+
+            <p>我13年起从事图形界面的设计工作我13年起从事图形界面的设计工作13年起从事图形界面的
+                设计工作我13年起从事图形界面的设计工作</p>
+        </div>
+
+        <div class="works">
+
+            <a href="#">
+                <img src="img/sunday.png" alt="">
+            </a>
+        </div>
+
+        <p id="tag">个人简历</p>
+
+    </div>
+
+
+    <div id="content4">
+
+        <div class="text">
+
+            <h3>你好</h3>
+
+            <p>我13年起从事图形界面的设计工作我13年起从事图形界面的设计工作13年起从事图形界面的
+                设计工作我13年起从事图形界面的设计工作</p>
+        </div>
+
+        <div class="works">
+
+            <a href="#">
+                <img src="img/sunday.png" alt="">
+            </a>
+        </div>
+
+        <p id="tag">个人简历</p>
+
+    </div>
+
+
+    <div id="footer">
+        <a href="home.html">EKLLL&nbsp;.</a>
+        <p>多谢你的浏览！</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('.works img').mousemove(function (e) {
+                var offset = $(this).offset();
+                var relX = e.pageX - offset.left;
+                var relY = e.pageY - offset.top;
+                var offsetMinX = $(this).width();
+                var offsetMinY = $(this).height();
+                var currentX = relX += offsetMinX * -0.5;
+                var currentY = relY += offsetMinY * -0.5;
+                var newX = currentX / 500000;
+                var newY = currentY / 1000000;
+                $(this).css('transform', "matrix3d(1.025,0,0," + -newX + ",0,1.025,0," + -newY + ",0,0,1,0,0,0,0,1)");
+            });
+            $(".works img").mouseout(function () {
+                $(this).css('transform', "matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)");
+            });
+
+        });
+
+
+
+    </script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
